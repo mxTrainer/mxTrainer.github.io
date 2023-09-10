@@ -54,6 +54,11 @@ function isTrainSame(train1, train2){ //assumes trains are of the same length. V
   return true;
 }
 
+let halfWidth = window.innerWidth/2
+c.onclick = function(e){
+    if(e.pageX <= halfWidth && displayed != 0){finished = false; displayTrain(finalArray[0][--displayed]); index.textContent = "#" + (displayed + 1) + "/" + numTrains; finished = true;}else if(displayed != finalArray[0].length - 1){finished = false; displayTrain(finalArray[0][++displayed]); index.textContent = "#" + (displayed + 1) + "/" + numTrains; finished = true;}
+}
+
 let displayed = 0;
 let index = document.getElementById("displayed");
 window.addEventListener("keydown",function(e){
