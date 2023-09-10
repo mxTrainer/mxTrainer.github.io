@@ -9,7 +9,7 @@ const dW = c.width/rowLimit;
 const dH = dW/2;
 const spacer = dH/4;
 
-let dotW = 2;
+let dotW = dH/14;
 
 let bPrint = [
   [],
